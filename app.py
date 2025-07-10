@@ -1,9 +1,9 @@
 from flask import Flask,jsonify,request
-from config import SQL_ALCHEMY_DATABASE_URI, SQL_ALCHEMY_TRACK_MODIFICATIONS
+from config import SQLALCHEMY_DATABASE_URI, SQL_ALCHEMY_TRACK_MODIFICATIONS
 from models.users import db, Users
 
 app= Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']=SQL_ALCHEMY_DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URI']=SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATION']= SQL_ALCHEMY_TRACK_MODIFICATIONS
 
 db.init_app(app)
