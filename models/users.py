@@ -7,14 +7,14 @@ class Users(db.model):
     '''name=db.Column(db.String(150))
     email=db.Column(db.String(150),unique=True)
     contact=db.Column(db.String(100))'''
-    heading=db.column(db.String[200])
-    sub_heading=db.column(db.String[200])
-    category=db.column(db.String[200])
-    thimbnail=db.column(db.String[200])
-    published_data=db.column(db.DateTime[200])
-    description=db.column(db.String[200])
-    post_by=db.column(db.String[200])
-    status=db.column(db.String[200])
+    heading=db.Column(db.String(200))
+    sub_heading=db.Column(db.String(200))
+    category=db.Column(db.String(200))
+    thimbnail=db.Column(db.String(200))
+    published_data=db.Column(db.DateTime(200))
+    description=db.Column(db.String(200))
+    post_by=db.Column(db.String(200))
+    status=db.Column(db.String(200))
 
     def user_data(self):
         data={
